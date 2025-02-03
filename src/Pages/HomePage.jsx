@@ -1,12 +1,17 @@
 import React from "react";
+
+import Navbar from "../Pages/Navbar"; // Import Navbar
+import AboutPage from "../Pages/AboutPage"; // Import AboutPage
 import CardComponent from "../components/CardComponent ";
 import ButtonComponent from "../components/ButtonComponent";
 import GridComponent from "../components/GridComponent";
 
-
 const HomePage = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-gray-100">
+      {/* Add Navbar to the top of the page */}
+      <Navbar />
+      
       <GridComponent>
         <CardComponent className="w-full max-w-3xl p-6 shadow-lg">
           <h1 className="text-3xl font-bold text-center text-gray-800 mb-4">
@@ -25,6 +30,9 @@ const HomePage = () => {
           </div>
         </CardComponent>
       </GridComponent>
+
+      {/* Add AboutPage below the main content */}
+      <AboutPage />
     </div>
   );
 };
